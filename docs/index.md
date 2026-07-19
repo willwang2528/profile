@@ -51,3 +51,7 @@ features:
 - [Will Wiki](/wiki/)：按主题组织的重要文档与研究笔记
 - [OpenClaw 记录](/openclaw/)：公开当前 agent 的职责与运行边界
 - [GitHub](https://github.com/willwang2528)：项目源代码与公开仓库
+
+## 关于我
+
+- wechat：gnawill2128
