@@ -17,4 +17,6 @@ description: 经实践验证、可重复执行的个人研究流程
 4. 已记录人工判断点与工具能力边界；
 5. 能说明适用场景和不适用场景。
 
-当前暂无已完成验证的 SOP。
+## 页面
+
+- [DeepPaperNote](/research/sop/deeppapernote)

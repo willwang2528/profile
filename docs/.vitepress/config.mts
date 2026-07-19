@@ -76,7 +76,10 @@ export default defineConfig({
         {
           text: '个人 SOP',
           collapsed: false,
-          items: [{ text: 'SOP 目录', link: '/research/sop/' }]
+          items: [
+            { text: 'SOP 目录', link: '/research/sop/' },
+            { text: 'DeepPaperNote', link: '/research/sop/deeppapernote' }
+          ]
         },
         {
           text: '内化',

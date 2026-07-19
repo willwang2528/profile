@@ -32,7 +32,7 @@ Research
 ├── 经验
 │   └── 疯狂硕士的写论文套路2
 ├── 个人 SOP
-│   └── 待沉淀
+│   └── DeepPaperNote
 └── 内化
     └── 待验证与复盘
 ```
@@ -42,6 +42,7 @@ Research
 | 内容 | 分类 | 状态 |
 | --- | --- | --- |
 | [疯狂硕士的写论文套路2](./experience/claude-code-paper-ideas) | 经验 | 外部经验，待实践验证 |
+| [DeepPaperNote](./sop/deeppapernote) | 个人 SOP | 已收录 |
 | [个人 SOP](./sop/) | 个人 SOP | 目录已创建 |
 | [内化](./internalized/) | 内化 | 目录已创建 |
 
