@@ -18,6 +18,7 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: 'Will Wiki', link: '/wiki/' },
+      { text: 'Research', link: '/research/' },
       { text: 'OpenClaw', link: '/openclaw/' },
       { text: 'GitHub', link: 'https://github.com/willwang2528' }
     ],
@@ -57,6 +58,30 @@ export default defineConfig({
             { text: '当前配置', link: '/openclaw/' },
             { text: '公开边界', link: '/openclaw/privacy' }
           ]
+        }
+      ],
+      '/research/': [
+        {
+          text: 'Research',
+          items: [{ text: '研究目录', link: '/research/' }]
+        },
+        {
+          text: '经验',
+          collapsed: false,
+          items: [
+            { text: '经验目录', link: '/research/experience/' },
+            { text: '疯狂硕士的写论文套路2', link: '/research/experience/claude-code-paper-ideas' }
+          ]
+        },
+        {
+          text: '个人 SOP',
+          collapsed: false,
+          items: [{ text: 'SOP 目录', link: '/research/sop/' }]
+        },
+        {
+          text: '内化',
+          collapsed: false,
+          items: [{ text: '内化目录', link: '/research/internalized/' }]
         }
       ]
     },

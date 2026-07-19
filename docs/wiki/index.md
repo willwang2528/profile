@@ -7,6 +7,8 @@ description: Will 的工程知识目录
 
 这里收纳经过整理的重要文档、架构研究与工程实践。目录按领域组织，原始来源与同步时间会尽量保留，便于追溯。
 
+独立的研究方法、外部经验、个人 SOP 与内化记录已迁移到 [Research](/research/) 板块。
+
 <div class="knowledge-map">
   <a href="/profile/wiki/github-pages/deployment-sop">
     <strong>工程实践</strong>

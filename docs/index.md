@@ -13,6 +13,9 @@ hero:
       text: 浏览 Will Wiki
       link: /wiki/
     - theme: alt
+      text: 进入 Research
+      link: /research/
+    - theme: alt
       text: 查看 OpenClaw 记录
       link: /openclaw/
     - theme: alt
@@ -49,6 +52,7 @@ features:
 ## 入口
 
 - [Will Wiki](/wiki/)：按主题组织的重要文档与研究笔记
+- [Research](/research/)：收集外部经验，沉淀个人 SOP，并通过实践完成内化
 - [OpenClaw 记录](/openclaw/)：公开当前 agent 的职责与运行边界
 - [GitHub](https://github.com/willwang2528)：项目源代码与公开仓库
 
