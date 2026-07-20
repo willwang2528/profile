@@ -21,4 +21,4 @@ description: 经实践验证、可重复执行的个人研究流程
 
 - [DeepPaperNote](/research/sop/deeppapernote)
 - [Obsidian](/research/sop/obsidian)
-- [markdown语法](research/sop/markdown.md)
+- [Markdown 语法](./markdown)
