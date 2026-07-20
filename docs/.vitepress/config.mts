@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Will Wang',
-  description: '架构开发工程师，关注 Sandbox、Agent 系统、长期记忆与 AI 工程化。',
+  description: '架构研发工程师，关注 Sandbox、Agent 系统、长期记忆与 AI 工程化。',
   cleanUrls: true,
   lastUpdated: true,
   head: [
@@ -63,13 +63,13 @@ export default defineConfig({
       '/research/': [
         {
           text: 'Research',
-          items: [{ text: '研究目录', link: '/research/' }]
+          items: [{ text: '概述', link: '/research/' }]
         },
         {
           text: '经验',
           collapsed: false,
           items: [
-            { text: '经验目录', link: '/research/experience/' },
+            { text: '目录', link: '/research/experience/' },
             { text: '疯狂硕士的写论文套路2', link: '/research/experience/claude-code-paper-ideas' }
           ]
         },
@@ -77,14 +77,16 @@ export default defineConfig({
           text: '个人 SOP',
           collapsed: false,
           items: [
-            { text: 'SOP 目录', link: '/research/sop/' },
-            { text: 'DeepPaperNote', link: '/research/sop/deeppapernote' }
+            { text: '目录', link: '/research/sop/' },
+            { text: 'DeepPaperNote', link: '/research/sop/deeppapernote' },
+            { text: 'Obsidian', link: '/research/sop/obsidian' },
+            { text: 'markdown', link: '/research/sop/markdown' }
           ]
         },
         {
           text: '内化',
           collapsed: false,
-          items: [{ text: '内化目录', link: '/research/internalized/' }]
+          items: [{ text: '目录', link: '/research/internalized/' }]
         }
       ]
     },
