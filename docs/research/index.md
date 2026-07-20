@@ -15,6 +15,10 @@ description: Will 的研究经验、个人 SOP 与内化记录
     <strong>经验</strong>
     <span>收集他人的研究方法、工具用法与可复现实践。</span>
   </a>
+  <a href="/profile/research/record/">
+    <strong>record</strong>
+    <span>对科研阶段的记录工作。</span>
+  </a>
   <a href="/profile/research/sop/">
     <strong>个人 SOP</strong>
     <span>把验证有效的研究流程沉淀为可重复执行的步骤。</span>
@@ -31,6 +35,8 @@ description: Will 的研究经验、个人 SOP 与内化记录
 Research
 ├── 经验
 │   └── 疯狂硕士的写论文套路2
+├── record
+│   └── 第一阶段：科研的基本闭环
 ├── 个人 SOP
 │   ├── DeepPaperNote
 │   ├── Obsidian
@@ -44,6 +50,7 @@ Research
 | 内容                                                  | 分类 | 状态 |
 |-----------------------------------------------------| --- | --- |
 | [疯狂硕士的写论文套路2](./experience/claude-code-paper-ideas) | 经验 | 外部经验，待实践验证 |
+| [第一阶段：科研的基本闭环](./record/)                    | record | 已收录 |
 | [DeepPaperNote](./sop/deeppapernote)                | 个人 SOP | 已收录 |
 | [Obsidian](./sop/obsidian)                          | 个人 SOP | 已收录 |
 | [Markdown 语法](./sop/markdown)                       | 个人 SOP | 已收录 |

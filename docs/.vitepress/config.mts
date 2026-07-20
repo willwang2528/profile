@@ -74,6 +74,13 @@ export default defineConfig({
           ]
         },
         {
+          text: 'record',
+          collapsed: false,
+          items: [
+            { text: '第一阶段', link: '/research/record/' }
+          ]
+        },
+        {
           text: '个人 SOP',
           collapsed: false,
           items: [
