@@ -3,9 +3,11 @@ title: Obsidian
 description: Markdown 语法
 ---
 
-# 常用掌握的 Markdown 语法
+# 常用 Markdown 语法
 
-> 已实践
+> 在 AI 时代，为了更好的「与模型对话」or「操作Agent」，以便 AI 理解你的意图，**「掌握 Markdown 语法撰写」已成为高优先级学习目标**
+> 
+> 通过平时科研和工作期间的实践经验，整理如下常用 Markdown 语法
 
 ## 1. 标题
 

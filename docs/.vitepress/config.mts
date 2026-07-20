@@ -80,7 +80,7 @@ export default defineConfig({
             { text: '目录', link: '/research/sop/' },
             { text: 'DeepPaperNote', link: '/research/sop/deeppapernote' },
             { text: 'Obsidian', link: '/research/sop/obsidian' },
-            { text: 'markdown', link: '/research/sop/markdown' }
+            { text: 'Markdown 语法', link: '/research/sop/markdown' }
           ]
         },
         {

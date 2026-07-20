@@ -46,7 +46,7 @@ Research
 | [疯狂硕士的写论文套路2](./experience/claude-code-paper-ideas) | 经验 | 外部经验，待实践验证 |
 | [DeepPaperNote](./sop/deeppapernote)                | 个人 SOP | 已收录 |
 | [Obsidian](./sop/obsidian)                          | 个人 SOP | 已收录 |
-| [Obsidian](./sop/markdown)                          | 个人 SOP | 已收录 |
+| [Markdown 语法](./sop/markdown)                       | 个人 SOP | 已收录 |
 | [个人 SOP](./sop/)                                    | 个人 SOP | 目录已创建 |
 | [内化](./internalized/)                               | 内化 | 目录已创建 |
 
