@@ -19,33 +19,14 @@ export default defineConfig({
       { text: '首页', link: '/' },
       { text: 'Will Wiki', link: '/wiki/' },
       { text: 'Research', link: '/research/' },
-      { text: 'OpenClaw', link: '/openclaw/' },
       {
-        text: 'Project',
+        text: 'OpenClaw',
         items: [
-          {
-            text: 'Agent Infra',
-            items: [
-              { text: 'Knowledge', link: '/project/agent-infra/knowledge' },
-              { text: 'Research', link: '/project/agent-infra/research' }
-            ]
-          },
-          {
-            text: 'Memory',
-            items: [
-              { text: 'Knowledge', link: '/project/memory/knowledge' },
-              { text: 'ArKaiMemory', link: '/project/memory/arkaimemory' }
-            ]
-          },
-          {
-            text: 'Framework',
-            items: [
-              { text: 'Knowledge', link: '/project/framework/knowledge' },
-              { text: 'ArKai', link: '/project/framework/arkai' }
-            ]
-          }
+          { text: 'main', link: '/openclaw/' },
+          { text: '公开边界', link: '/openclaw/privacy' }
         ]
-      }
+      },
+      { text: 'Project', link: '/project/' }
     ],
     sidebar: {
       '/wiki/': [
@@ -82,6 +63,36 @@ export default defineConfig({
           items: [
             { text: '当前配置', link: '/openclaw/' },
             { text: '公开边界', link: '/openclaw/privacy' }
+          ]
+        }
+      ],
+      '/project/': [
+        {
+          text: 'Project',
+          items: [{ text: '项目目录', link: '/project/' }]
+        },
+        {
+          text: 'Agent Infra',
+          collapsed: false,
+          items: [
+            { text: 'Knowledge', link: '/project/agent-infra/knowledge' },
+            { text: 'Research', link: '/project/agent-infra/research' }
+          ]
+        },
+        {
+          text: 'Memory',
+          collapsed: false,
+          items: [
+            { text: 'Knowledge', link: '/project/memory/knowledge' },
+            { text: 'ArKaiMemory', link: '/project/memory/arkaimemory' }
+          ]
+        },
+        {
+          text: 'Framework',
+          collapsed: false,
+          items: [
+            { text: 'Knowledge', link: '/project/framework/knowledge' },
+            { text: 'ArKai', link: '/project/framework/arkai' }
           ]
         }
       ],
