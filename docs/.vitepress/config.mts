@@ -20,7 +20,32 @@ export default defineConfig({
       { text: 'Will Wiki', link: '/wiki/' },
       { text: 'Research', link: '/research/' },
       { text: 'OpenClaw', link: '/openclaw/' },
-      { text: 'GitHub', link: 'https://github.com/willwang2528' }
+      {
+        text: 'Project',
+        items: [
+          {
+            text: 'Agent Infra',
+            items: [
+              { text: 'Knowledge', link: '/project/agent-infra/knowledge' },
+              { text: 'Research', link: '/project/agent-infra/research' }
+            ]
+          },
+          {
+            text: 'Memory',
+            items: [
+              { text: 'Knowledge', link: '/project/memory/knowledge' },
+              { text: 'ArKaiMemory', link: '/project/memory/arkaimemory' }
+            ]
+          },
+          {
+            text: 'Framework',
+            items: [
+              { text: 'Knowledge', link: '/project/framework/knowledge' },
+              { text: 'ArKai', link: '/project/framework/arkai' }
+            ]
+          }
+        ]
+      }
     ],
     sidebar: {
       '/wiki/': [
