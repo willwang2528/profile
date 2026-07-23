@@ -10,6 +10,7 @@ description: 外部研究经验与方法记录
 ## 已收录
 
 - [疯狂硕士的写论文套路2](./claude-code-paper-ideas)：Claude Code + 人类监督的论文 Idea 生产与验证工作流
+- [df 读论文sop](./guifei-sop.md)：Claude Code + 人类监督的论文 Idea 生产与验证工作流
 
 ## 收录原则
 

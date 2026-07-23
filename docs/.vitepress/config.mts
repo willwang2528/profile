@@ -106,7 +106,8 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: '目录', link: '/research/experience/' },
-            { text: '疯狂硕士的写论文套路2', link: '/research/experience/claude-code-paper-ideas' }
+            { text: '疯狂硕士的写论文套路2', link: '/research/experience/claude-code-paper-ideas' },
+            { text: 'df 读论文 sop', link: '/research/experience/guifei-sop.md' }
           ]
         },
         {
