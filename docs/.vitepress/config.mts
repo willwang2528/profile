@@ -102,6 +102,11 @@ export default defineConfig({
           items: [{ text: '概述', link: '/research/' }]
         },
         {
+          text: 'GUI Agents',
+          collapsed: false,
+          items: [{ text: '目录', link: '/research/gui-agents/' }]
+        },
+        {
           text: '经验',
           collapsed: false,
           items: [

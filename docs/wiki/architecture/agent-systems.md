@@ -17,3 +17,7 @@ description: Agent 架构与工程治理研究目录
 ## 当前状态
 
 目录已建立，后续优先收录经过实际验证的架构决策和实现记录。
+
+## 相关研究
+
+- [GUI Agents](/research/gui-agents/)： MEMORY / CONTEXT

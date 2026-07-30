@@ -11,6 +11,10 @@ description: Will 的研究经验、个人 SOP 与内化记录
 > “经验”中的文章可能来自外部作者，保留来源并不代表完全认同。真正进入“个人 SOP”或“内化”的内容，需要经过实践验证。
 
 <div class="knowledge-map">
+  <a href="/profile/research/gui-agents/">
+    <strong>GUI Agents</strong>
+    <span>Memory + GUI Agent </span>
+  </a>
   <a href="/profile/research/experience/claude-code-paper-ideas">
     <strong>经验</strong>
     <span>收集他人的研究方法、工具用法与可复现实践。</span>
@@ -33,6 +37,8 @@ description: Will 的研究经验、个人 SOP 与内化记录
 
 ```text
 Research
+├── GUI Agents
+│   └── 研究目录
 ├── 经验
 │   └── 疯狂硕士的写论文套路2
 ├── record
@@ -49,6 +55,7 @@ Research
 
 | 内容                                                  | 分类 | 状态 |
 |-----------------------------------------------------| --- | --- |
+| [GUI Agents](./gui-agents/)                         | 研究方向 | 目录已创建 |
 | [疯狂硕士的写论文套路2](./experience/claude-code-paper-ideas) | 经验 | 外部经验，待实践验证 |
 | [第一阶段：科研的基本闭环](./record/)                    | record | 已收录 |
 | [DeepPaperNote](./sop/deeppapernote)                | 个人 SOP | 已收录 |
