@@ -20,4 +20,4 @@ description: Agent 架构与工程治理研究目录
 
 ## 相关研究
 
-- [GUI Agents](/research/gui-agents/)： MEMORY / CONTEXT
+- [GUI Agents](/research/gui-agents/)：Memory / Context

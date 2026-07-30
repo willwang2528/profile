@@ -13,7 +13,7 @@ description: Will 的研究经验、个人 SOP 与内化记录
 <div class="knowledge-map">
   <a href="/profile/research/gui-agents/">
     <strong>GUI Agents</strong>
-    <span>Memory + GUI Agent </span>
+    <span>Memory / Context in GUI Agents</span>
   </a>
   <a href="/profile/research/experience/claude-code-paper-ideas">
     <strong>经验</strong>
@@ -38,7 +38,7 @@ description: Will 的研究经验、个人 SOP 与内化记录
 ```text
 Research
 ├── GUI Agents
-│   └── 研究目录
+│   └── Memory / Context
 ├── 经验
 │   └── 疯狂硕士的写论文套路2
 ├── record
@@ -55,7 +55,7 @@ Research
 
 | 内容                                                  | 分类 | 状态 |
 |-----------------------------------------------------| --- | --- |
-| [GUI Agents](./gui-agents/)                         | 研究方向 | 目录已创建 |
+| [GUI Agents](./gui-agents/)                         | 研究方向 | ARIS Paper · W1 |
 | [疯狂硕士的写论文套路2](./experience/claude-code-paper-ideas) | 经验 | 外部经验，待实践验证 |
 | [第一阶段：科研的基本闭环](./record/)                    | record | 已收录 |
 | [DeepPaperNote](./sop/deeppapernote)                | 个人 SOP | 已收录 |
