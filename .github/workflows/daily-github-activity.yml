@@ -13,14 +13,13 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: daily-github-activity
   cancel-in-progress: false
 
 jobs:
-  create-report-pr:
+  commit-report:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
@@ -50,18 +49,6 @@ jobs:
           fi
           echo "date=$report_date" >> "$GITHUB_OUTPUT"
 
-      - name: Prepare report branch
-        env:
-          REPORT_DATE: ${{ steps.report.outputs.date }}
-        run: |
-          branch="automation/daily-github-activity-$REPORT_DATE"
-          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
-            git fetch origin "$branch"
-            git switch --force-create "$branch" FETCH_HEAD
-          else
-            git switch --create "$branch"
-          fi
-
       - name: Generate report
         env:
           REPORT_DATE: ${{ steps.report.outputs.date }}
@@ -69,38 +56,17 @@ jobs:
           python3 -m unittest discover --start-directory .github/scripts --pattern "test_*.py"
           python3 .github/scripts/daily_github_activity.py --date "$REPORT_DATE"
 
-      - name: Commit and push report
-        id: report_branch
+      - name: Commit report to main
         env:
           REPORT_DATE: ${{ steps.report.outputs.date }}
         run: |
-          branch="automation/daily-github-activity-$REPORT_DATE"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "tmp/$REPORT_DATE.txt"
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: add GitHub activity for $REPORT_DATE"
-            git push --set-upstream origin "$branch"
-          fi
-          if git diff --quiet origin/main HEAD -- "tmp/$REPORT_DATE.txt"; then
-            echo "pending=false" >> "$GITHUB_OUTPUT"
-          else
-            echo "pending=true" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Create pull request
-        if: steps.report_branch.outputs.pending == 'true'
-        env:
-          REPORT_DATE: ${{ steps.report.outputs.date }}
-        run: |
-          branch="automation/daily-github-activity-$REPORT_DATE"
-          existing_url="$(gh pr list --head "$branch" --base main --state open --json url --jq '.[0].url')"
-          if [[ -n "$existing_url" ]]; then
-            echo "Updated existing pull request: $existing_url"
+          if git diff --cached --quiet; then
+            echo "Report is already up to date."
             exit 0
           fi
-          gh pr create \
-            --base main \
-            --head "$branch" \
-            --title "chore: add GitHub activity for $REPORT_DATE" \
-            --body "Automated public GitHub activity summary for $REPORT_DATE (Asia/Shanghai)."
+          git commit -m "chore: add GitHub activity for $REPORT_DATE"
+          git pull --rebase origin main
+          git push origin HEAD:main

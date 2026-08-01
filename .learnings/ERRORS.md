@@ -189,3 +189,41 @@ Retry the push with approved network access outside the sandbox.
 - **Notes**: The push completed successfully with approved network access.
 
 ---
+
+## [ERR-20260801-003] zsh-unquoted-api-query
+
+**Logged**: 2026-08-01T10:43:10+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: infra
+
+### Summary
+
+An unquoted GitHub API path containing `?ref=` was interpreted as a zsh glob.
+
+### Error
+
+```text
+zsh:1: no matches found: repos/willwang2528/profile/contents/tmp/2026-07-31.txt?ref=automation/daily-github-activity-2026-07-31
+```
+
+### Context
+
+- Command: `gh api repos/.../2026-07-31.txt?ref=automation/...`
+- zsh expands `?` before passing arguments to `gh`.
+
+### Suggested Fix
+
+Quote API paths that contain query strings.
+
+### Metadata
+
+- Reproducible: yes
+- Related Files: .github/workflows/daily-github-activity.yml
+
+### Resolution
+
+- **Resolved**: 2026-08-01T10:43:10+08:00
+- **Notes**: Use a quoted endpoint, or verify the merged file from the local checkout.
+
+---
