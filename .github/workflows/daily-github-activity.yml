@@ -1,0 +1,106 @@
+name: Daily GitHub activity
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+      timezone: Asia/Shanghai
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Optional report date (YYYY-MM-DD); defaults to yesterday
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: daily-github-activity
+  cancel-in-progress: false
+
+jobs:
+  create-report-pr:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      ACTIVITY_USER: willwang2528
+      ACTIVITY_TIMEZONE: Asia/Shanghai
+      TARGET_REPOSITORY: willwang2528/profile
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Select report date
+        id: report
+        env:
+          REQUESTED_DATE: ${{ inputs.date }}
+        run: |
+          if [[ -n "$REQUESTED_DATE" ]]; then
+            report_date="$REQUESTED_DATE"
+          else
+            report_date="$(TZ="$ACTIVITY_TIMEZONE" date --date=yesterday +%F)"
+          fi
+          if [[ ! "$report_date" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+            echo "Invalid report date: $report_date" >&2
+            exit 2
+          fi
+          echo "date=$report_date" >> "$GITHUB_OUTPUT"
+
+      - name: Prepare report branch
+        env:
+          REPORT_DATE: ${{ steps.report.outputs.date }}
+        run: |
+          branch="automation/daily-github-activity-$REPORT_DATE"
+          if git ls-remote --exit-code --heads origin "$branch" >/dev/null 2>&1; then
+            git fetch origin "$branch"
+            git switch --force-create "$branch" FETCH_HEAD
+          else
+            git switch --create "$branch"
+          fi
+
+      - name: Generate report
+        env:
+          REPORT_DATE: ${{ steps.report.outputs.date }}
+        run: |
+          python3 -m unittest discover --start-directory .github/scripts --pattern "test_*.py"
+          python3 .github/scripts/daily_github_activity.py --date "$REPORT_DATE"
+
+      - name: Commit and push report
+        id: report_branch
+        env:
+          REPORT_DATE: ${{ steps.report.outputs.date }}
+        run: |
+          branch="automation/daily-github-activity-$REPORT_DATE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "tmp/$REPORT_DATE.txt"
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: add GitHub activity for $REPORT_DATE"
+            git push --set-upstream origin "$branch"
+          fi
+          if git diff --quiet origin/main HEAD -- "tmp/$REPORT_DATE.txt"; then
+            echo "pending=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "pending=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create pull request
+        if: steps.report_branch.outputs.pending == 'true'
+        env:
+          REPORT_DATE: ${{ steps.report.outputs.date }}
+        run: |
+          branch="automation/daily-github-activity-$REPORT_DATE"
+          existing_url="$(gh pr list --head "$branch" --base main --state open --json url --jq '.[0].url')"
+          if [[ -n "$existing_url" ]]; then
+            echo "Updated existing pull request: $existing_url"
+            exit 0
+          fi
+          gh pr create \
+            --base main \
+            --head "$branch" \
+            --title "chore: add GitHub activity for $REPORT_DATE" \
+            --body "Automated public GitHub activity summary for $REPORT_DATE (Asia/Shanghai)."
