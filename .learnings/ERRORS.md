@@ -112,3 +112,41 @@ Retry visual inspection in a session with an in-app browser or connected Chrome 
 - Related Files: docs/research/gui-agents/index.md
 
 ---
+
+## [ERR-20260801-001] macos-python-bytecode-cache
+
+**Logged**: 2026-08-01T10:21:37+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: tests
+
+### Summary
+
+The macOS system Python could not write its redirected bytecode cache inside the filesystem sandbox.
+
+### Error
+
+```text
+PermissionError: [Errno 1] Operation not permitted: '/Users/will/Library/Caches/com.apple.python/Users/will/Documents'
+```
+
+### Context
+
+- Command: `python3 -m py_compile .github/scripts/daily_github_activity.py .github/scripts/test_daily_github_activity.py`
+- The project files are writable, but this Python installation redirects `__pycache__` into `~/Library/Caches/com.apple.python/`.
+
+### Suggested Fix
+
+Set `PYTHONPYCACHEPREFIX` to a writable temporary directory when running bytecode checks in the sandbox.
+
+### Metadata
+
+- Reproducible: yes
+- Related Files: .github/scripts/daily_github_activity.py, .github/scripts/test_daily_github_activity.py
+
+### Resolution
+
+- **Resolved**: 2026-08-01T10:21:37+08:00
+- **Notes**: Re-run the check with `PYTHONPYCACHEPREFIX` pointing to a directory under `/tmp`.
+
+---
