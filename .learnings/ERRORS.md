@@ -150,3 +150,42 @@ Set `PYTHONPYCACHEPREFIX` to a writable temporary directory when running bytecod
 - **Notes**: Re-run the check with `PYTHONPYCACHEPREFIX` pointing to a directory under `/tmp`.
 
 ---
+
+## [ERR-20260801-002] git-push-network-sandbox
+
+**Logged**: 2026-08-01T10:27:33+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: infra
+
+### Summary
+
+An SSH push to GitHub was blocked by the local network sandbox.
+
+### Error
+
+```text
+ssh: connect to host github.com port 22: Operation not permitted
+fatal: Could not read from remote repository.
+```
+
+### Context
+
+- Command: `git push --set-upstream origin codex/daily-github-activity`
+- The same SSH remote had worked for clone, confirming the repository and key were valid.
+
+### Suggested Fix
+
+Retry the push with approved network access outside the sandbox.
+
+### Metadata
+
+- Reproducible: yes
+- Related Files: .git/config
+
+### Resolution
+
+- **Resolved**: 2026-08-01T10:27:33+08:00
+- **Notes**: The push completed successfully with approved network access.
+
+---
