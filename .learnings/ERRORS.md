@@ -182,6 +182,9 @@ Retry the push with approved network access outside the sandbox.
 
 - Reproducible: yes
 - Related Files: .git/config
+- Recurrence-Count: 3
+- First-Seen: 2026-08-01
+- Last-Seen: 2026-08-04
 
 ### Resolution
 
@@ -264,5 +267,43 @@ Verify attribution using the repository commit metadata and an end-to-end workfl
 
 - **Resolved**: 2026-08-04T14:22:34+08:00
 - **Notes**: Continue with local metadata validation and verify the resulting commit through GitHub after the workflow runs.
+
+---
+
+## [ERR-20260804-002] github-write-paths-unavailable
+
+**Logged**: 2026-08-04T14:36:14+08:00
+**Priority**: high
+**Status**: pending
+**Area**: infra
+
+### Summary
+
+All available GitHub write paths were unavailable after the workflow fix was committed locally.
+
+### Error
+
+```text
+ssh: connect to host github.com port 22: Operation not permitted
+GitHub edit page: navigation timed out
+gh auth login: error connecting to github.com
+```
+
+### Context
+
+- Direct SSH push was blocked by the current network sandbox.
+- The in-app GitHub edit page timed out twice.
+- GitHub CLI authentication could not reach GitHub.
+- Local commit `446b55a` contains the tested workflow fix.
+
+### Suggested Fix
+
+Push the local `main` commit from a network-enabled session, then dispatch one unused historical report date and verify that GitHub resolves both author and committer to `willwang2528`.
+
+### Metadata
+
+- Reproducible: yes
+- Related Files: .github/workflows/daily-github-activity.yml
+- See Also: ERR-20260801-002
 
 ---
