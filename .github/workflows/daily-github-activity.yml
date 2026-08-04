@@ -2,7 +2,11 @@ name: Daily GitHub activity
 
 on:
   schedule:
-    - cron: "0 8 * * *"
+    # Avoid minute 0, when GitHub's scheduled-workflow queue is busiest.
+    - cron: "7 8 * * *"
+      timezone: Asia/Shanghai
+    # Idempotent fallback: it only commits if the report is missing or changed.
+    - cron: "17 20 * * *"
       timezone: Asia/Shanghai
   workflow_dispatch:
     inputs:
@@ -26,6 +30,9 @@ jobs:
       ACTIVITY_USER: willwang2528
       ACTIVITY_TIMEZONE: Asia/Shanghai
       TARGET_REPOSITORY: willwang2528/profile
+      COMMIT_AUTHOR_NAME: Will Wang
+      COMMIT_AUTHOR_EMAIL: willwang2528@users.noreply.github.com
+      TZ: Asia/Shanghai
       GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout main
@@ -60,13 +67,15 @@ jobs:
         env:
           REPORT_DATE: ${{ steps.report.outputs.date }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "$COMMIT_AUTHOR_NAME"
+          git config user.email "$COMMIT_AUTHOR_EMAIL"
           git add "tmp/$REPORT_DATE.txt"
           if git diff --cached --quiet; then
             echo "Report is already up to date."
             exit 0
           fi
           git commit -m "chore: add GitHub activity for $REPORT_DATE"
+          test "$(git show -s --format=%ae HEAD)" = "$COMMIT_AUTHOR_EMAIL"
+          test "$(git show -s --format=%ce HEAD)" = "$COMMIT_AUTHOR_EMAIL"
           git pull --rebase origin main
           git push origin HEAD:main

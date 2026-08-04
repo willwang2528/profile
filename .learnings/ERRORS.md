@@ -227,3 +227,42 @@ Quote API paths that contain query strings.
 - **Notes**: Use a quoted endpoint, or verify the merged file from the local checkout.
 
 ---
+
+## [ERR-20260804-001] public-commit-page-fetch
+
+**Logged**: 2026-08-04T14:22:34+08:00
+**Priority**: low
+**Status**: resolved
+**Area**: infra
+
+### Summary
+
+The web fetcher could not open a public GitHub commit URL for identity verification.
+
+### Error
+
+```text
+Internal Error: URL is not safe to open
+Failed to fetch: Cache miss
+```
+
+### Context
+
+- Targets: the public REST and HTML URLs for commit `8487c20`.
+- The repository clone and official contribution documentation remained available.
+
+### Suggested Fix
+
+Verify attribution using the repository commit metadata and an end-to-end workflow run instead of relying on the web cache.
+
+### Metadata
+
+- Reproducible: unknown
+- Related Files: .github/workflows/daily-github-activity.yml
+
+### Resolution
+
+- **Resolved**: 2026-08-04T14:22:34+08:00
+- **Notes**: Continue with local metadata validation and verify the resulting commit through GitHub after the workflow runs.
+
+---
