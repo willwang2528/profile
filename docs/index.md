@@ -16,6 +16,9 @@ hero:
       text: 进入 Research
       link: /research/
     - theme: alt
+      text: 查看 Work
+      link: /work/
+    - theme: alt
       text: 查看 OpenClaw 记录
       link: /openclaw/
     - theme: alt
@@ -47,11 +50,13 @@ features:
 
 - **研究主线：** Sandbox、Agent 系统、长期记忆机制
 - **工程方向：** AI 工程化、自动化工作流、知识治理
+- **从业方向：** Agent 研发、LLM 应用、后端开发
 - **近期建设：** 将重要公开信息逐步同步到本站与 GitHub 源仓库
 
 ## 入口
 
 - [Will Wiki](/wiki/)：按主题组织的重要文档与研究笔记
+- [Work](/work/)：面向 Agent 研发、LLM 应用与后端开发的学习路线与知识沉淀
 - [Research](/research/)：收集外部经验，沉淀个人 SOP，并通过实践完成内化
 - [OpenClaw 记录](/openclaw/)：公开当前 agent 的职责与运行边界
 - [GitHub](https://github.com/willwang2528)：项目源代码与公开仓库

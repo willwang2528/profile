@@ -17,6 +17,7 @@ export default defineConfig({
     siteTitle: 'Will Wang',
     nav: [
       { text: '首页', link: '/' },
+      { text: 'Work', link: '/work/' },
       { text: 'Will Wiki', link: '/wiki/' },
       { text: 'Research', link: '/research/' },
       {
@@ -29,6 +30,14 @@ export default defineConfig({
       { text: 'Project', link: '/project/' }
     ],
     sidebar: {
+      '/work/': [
+        {
+          text: 'Work',
+          items: [
+            { text: '学习路线', link: '/work/' }
+          ]
+        }
+      ],
       '/wiki/': [
         {
           text: 'Will Wiki',
