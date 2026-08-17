@@ -1,0 +1,2 @@
+2026-08-16
+- cordiverse/paper：添加 Star
