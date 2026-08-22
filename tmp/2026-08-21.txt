@@ -4,8 +4,8 @@
 - willwang2528/ai_town：创建分支 feat/O01-foundation
 - willwang2528/ai_town：创建分支 feat/B01-B02-world-read
 - willwang2528/ai_town：创建分支 test/T03a-chat-contract
-- willwang2528/ai_town：创建分支 feat/B01-seed-repository
 - willwang2528/ai_town：创建分支 test/T02a-decision-contract
+- willwang2528/ai_town：创建分支 feat/B01-seed-repository
 - willwang2528/ai_town：创建 PR #1
 - willwang2528/ai_town：创建 PR #2
 - willwang2528/ai_town：创建分支 feat/O00-requirements
@@ -63,3 +63,30 @@
 - willwang2528/ai_town：创建分支 test/T05b-server
 - willwang2528/ai_town：创建分支 test/Q01-gates
 - willwang2528/ai_town：创建分支 feat/B06-server
+- willwang2528/ai_town：关闭 PR #2
+- willwang2528/ai_town：关闭 PR #3
+- willwang2528/ai_town：关闭 PR #4
+- willwang2528/ai_town：关闭 PR #5
+- willwang2528/ai_town：关闭 PR #6
+- willwang2528/ai_town：关闭 PR #7
+- willwang2528/ai_town：关闭 PR #8
+- willwang2528/ai_town：关闭 PR #9
+- willwang2528/ai_town：关闭 PR #10
+- willwang2528/ai_town：关闭 PR #11
+- willwang2528/ai_town：关闭 PR #12
+- willwang2528/ai_town：关闭 PR #13
+- willwang2528/ai_town：关闭 PR #14
+- willwang2528/ai_town：关闭 PR #15
+- willwang2528/ai_town：关闭 PR #16
+- willwang2528/ai_town：关闭 PR #17
+- willwang2528/ai_town：关闭 PR #18
+- willwang2528/ai_town：关闭 PR #19
+- willwang2528/ai_town：关闭 PR #20
+- willwang2528/ai_town：关闭 PR #21
+- willwang2528/ai_town：关闭 PR #22
+- willwang2528/ai_town：关闭 PR #23
+- willwang2528/ai_town：关闭 PR #24
+- willwang2528/ai_town：关闭 PR #25
+- willwang2528/ai_town：关闭 PR #26
+- willwang2528/ai_town：关闭 PR #28
+- willwang2528/ai_town：关闭 PR #29
