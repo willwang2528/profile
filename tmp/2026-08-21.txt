@@ -1,0 +1,65 @@
+2026-08-21
+- anthropics/claude-code：添加 Star
+- willwang2528/ai_town：创建分支 feat/B03-tick-engine-impl
+- willwang2528/ai_town：创建分支 feat/O01-foundation
+- willwang2528/ai_town：创建分支 feat/B01-B02-world-read
+- willwang2528/ai_town：创建分支 test/T03a-chat-contract
+- willwang2528/ai_town：创建分支 feat/B01-seed-repository
+- willwang2528/ai_town：创建分支 test/T02a-decision-contract
+- willwang2528/ai_town：创建 PR #1
+- willwang2528/ai_town：创建 PR #2
+- willwang2528/ai_town：创建分支 feat/O00-requirements
+- willwang2528/ai_town：创建 PR #3
+- willwang2528/ai_town：创建 PR #4
+- willwang2528/ai_town：创建 PR #5
+- willwang2528/ai_town：创建 PR #6
+- willwang2528/ai_town：创建 PR #7
+- willwang2528/ai_town：创建 PR #8
+- willwang2528/ai_town：创建 PR #9
+- willwang2528/ai_town：创建 PR #10
+- willwang2528/ai_town：创建 PR #11
+- willwang2528/ai_town：创建 PR #12
+- willwang2528/ai_town：创建 PR #13
+- willwang2528/ai_town：创建 PR #14
+- willwang2528/ai_town：创建 PR #15
+- willwang2528/ai_town：创建 PR #16
+- willwang2528/ai_town：创建 PR #17
+- willwang2528/ai_town：创建 PR #18
+- willwang2528/ai_town：创建分支 test/T02-tick-decision
+- willwang2528/ai_town：创建 PR #19
+- willwang2528/ai_town：创建 PR #20
+- willwang2528/ai_town：创建 PR #21
+- willwang2528/ai_town：创建 PR #22
+- willwang2528/ai_town：创建 PR #23
+- willwang2528/ai_town：创建分支 test/T03c-chat-api
+- willwang2528/ai_town：创建 PR #24
+- willwang2528/ai_town：创建分支 feat/O01-chat-contract
+- willwang2528/ai_town：创建分支 feat/B04-ai-provider
+- willwang2528/ai_town：创建 PR #25
+- willwang2528/ai_town：创建 PR #26
+- willwang2528/ai_town：创建 PR #27
+- willwang2528/ai_town：创建分支 feat/F03-npc-detail
+- willwang2528/ai_town：创建 PR #28
+- willwang2528/ai_town：创建 PR #29
+- willwang2528/ai_town：创建 PR #30
+- willwang2528/ai_town：创建分支 main
+- willwang2528/ai_town：创建分支 feat/B06-api-errors
+- willwang2528/ai_town：创建分支 test/T05a-api-errors
+- willwang2528/ai_town：创建分支 feat/F01-world-view
+- willwang2528/ai_town：创建分支 test/T04-web-ui
+- willwang2528/ai_town：创建分支 fix/O01-vue-tooling
+- willwang2528/ai_town：创建分支 test/T01-contract-api
+- willwang2528/ai_town：创建分支 test/T03-ai-chat
+- willwang2528/ai_town：创建分支 feat/F04-chat-ui
+- willwang2528/ai_town：创建分支 docs/D01-delivery
+- willwang2528/ai_town：创建分支 test/T05-e2e
+- willwang2528/ai_town：创建分支 feat/B03-decision-contract
+- willwang2528/ai_town：创建分支 feat/B02-world-read
+- willwang2528/ai_town：创建分支 docs/Q02-acceptance
+- willwang2528/ai_town：创建分支 feat/B05-chat-api
+- willwang2528/ai_town：创建分支 fix/F05-dev-proxy
+- willwang2528/ai_town：创建分支 test/T03b-ai-provider
+- willwang2528/ai_town：创建分支 feat/F02-world-tick
+- willwang2528/ai_town：创建分支 test/T05b-server
+- willwang2528/ai_town：创建分支 test/Q01-gates
+- willwang2528/ai_town：创建分支 feat/B06-server
