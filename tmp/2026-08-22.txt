@@ -1,0 +1,38 @@
+2026-08-22
+- hfutwz/openclaw-project-agent：向 main 推送 0 个提交
+- willwang2528/ai_town：向 main 推送 0 个提交
+- willwang2528/report_site_html：向 main 推送 0 个提交
+- appium/appium-uiautomator2-driver：添加 Star
+- Imbad0202/academic-research-skills：添加 Star
+- willwang2528/ai_town：merged PR #30
+- willwang2528/ai_town：merged PR #1
+- willwang2528/ai_town：评论 PR #2「[O01] Freeze workspace foundation and Contract v1 scaffold」
+- willwang2528/ai_town：评论 PR #3「[T01] Specify world and NPC read behavior」
+- willwang2528/ai_town：评论 PR #4「[B01] Add deterministic town seed and in-memory repository」
+- willwang2528/ai_town：评论 PR #5「[B02] Add world and NPC detail read APIs」
+- willwang2528/ai_town：评论 PR #6「[T02a] Specify decision and tick contracts」
+- willwang2528/ai_town：评论 PR #7「[T02b] Specify tick context, atomic update and fallback」
+- willwang2528/ai_town：评论 PR #8「[B03a] Add validated decision and tick schemas」
+- willwang2528/ai_town：评论 PR #9「[B03] Execute validated atomic world ticks」
+- willwang2528/ai_town：评论 PR #10「[T03a] Specify chat request and response contracts」
+- willwang2528/ai_town：评论 PR #11「[T03b] Specify real, fake and mock AI providers」
+- willwang2528/ai_town：评论 PR #12「[O01] Freeze strict chat Contract v1」
+- willwang2528/ai_town：评论 PR #13「[B04] Add validated real and mock AI providers」
+- willwang2528/ai_town：评论 PR #14「[T03c] Specify chat API validation and fallback」
+- willwang2528/ai_town：评论 PR #15「[B05] Add validated persona chat API」
+- willwang2528/ai_town：评论 PR #16「[T05a] Specify unified safe API errors」
+- willwang2528/ai_town：评论 PR #17「[B06] Normalize and redact API errors」
+- willwang2528/ai_town：评论 PR #18「[O01] Align Vue tooling with Vitest 4」
+- willwang2528/ai_town：评论 PR #19「[T04] Specify town UI states and interactions」
+- willwang2528/ai_town：评论 PR #20「[F01] Render the API-backed town view」
+- willwang2528/ai_town：评论 PR #21「[T05b] Specify real API server startup」
+- willwang2528/ai_town：评论 PR #22「[F03] Add NPC detail ledger」
+- willwang2528/ai_town：评论 PR #23「[B06] Add safe API server entrypoint」
+- willwang2528/ai_town：评论 PR #24「[F02] Advance API-backed world turns」
+- willwang2528/ai_town：评论 PR #25「[F04] Add resilient persona chat UI」
+- willwang2528/ai_town：评论 PR #26「[T05] Cover the complete no-key browser flow」
+- willwang2528/ai_town：评论 PR #27「[F05] Align the dev API proxy port」
+- willwang2528/ai_town：关闭 PR #27
+- willwang2528/ai_town：评论 PR #28「[Q01] Record independent quality gates」
+- willwang2528/ai_town：评论 PR #29「[D01] Document operation, architecture and evidence」
+- hfutwz/openclaw-project-agent：添加 Star
